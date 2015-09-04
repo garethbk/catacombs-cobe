@@ -262,6 +262,33 @@ span.cloudWord:hover {
 .opaque {
   opacity: 1; }
 
+.resource-group {
+  text-align: center;
+  margin-bottom: 2.5%; }
+
+.resource-name {
+  background: lightblue; }
+
+.resource-name h3 {
+  display: inline-block; }
+
+.arrow {
+  float: right; }
+
+.resource-content {
+  background: lightgreen;
+  height: auto;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: 1s; }
+
+.visible-slide {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-height: 500px;
+  transition: 1s; }
+
 /* Responsive breakpoints (lifted from Bootstrap!) */
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */

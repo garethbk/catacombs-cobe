@@ -46,8 +46,8 @@
 							$url = get_post_meta($post->ID, "_url", true);
 							$phone = get_post_meta($post_>ID, "_phone", true);
 							echo '<div class="new-resource">';
-							echo '<div class="resource-name"><h3>' . $title . '</h3></div>';
-							echo '<div class="resource-content"><p>' . $url . '</p><p>' . $phone . '</p></div>';
+							echo '<div class="resource-name"><h3>' . $title . '</h3><span class="arrow" id="arrow-' . $title . '">></span></div>';
+							echo '<div class="resource-content" id="content-' . $title . '"><p>' . $url . '</p><p>' . $phone . '</p></div>';
 							echo '</div>';
 						}
 					endwhile;
@@ -85,6 +85,7 @@
 
 
 <?php wp_footer(); ?>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/resources.js" type="text/javascript"></script>
 </body>
 
 </html>
