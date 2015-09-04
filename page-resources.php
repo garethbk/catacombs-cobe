@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="content-area">
-		<div class="info-box">
+		<div class="resource-info-box">
 		<?php
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
 				$info_first = get_post_meta($post->ID, 'info_first', true);
@@ -32,8 +32,9 @@
 			endif;
 		?>
 		</div>
-		<div class="research-area">
+		<div class="resource-area">
 			<div class="resource-group" id="vcu">
+			<h2>VCU</h2>
 				<?php
 					$args = array( 'post_type' => 'cw_resources', 'posts_per_page' => -1 );
 					$resources_loop = new WP_query( $args );
@@ -43,17 +44,20 @@
 						$category = str_replace(' ', '', $category);
 						if ($category == 'vcu') {
 							$title = get_the_title($post->ID);
+							$titleID = strtolower($title);
+							$titleID = str_replace(' ', '', $titleID);
 							$url = get_post_meta($post->ID, "_url", true);
 							$phone = get_post_meta($post_>ID, "_phone", true);
 							echo '<div class="new-resource">';
-							echo '<div class="resource-name"><h3>' . $title . '</h3><span class="arrow" id="arrow-' . $title . '">></span></div>';
-							echo '<div class="resource-content" id="content-' . $title . '"><p>' . $url . '</p><p>' . $phone . '</p></div>';
+							echo '<div class="resource-name"><h3>' . $title . '</h3><span class="arrow" id="arrow-' . $titleID . '">&#8635;</span></div>';
+							echo '<div class="resource-content" id="content-' . $titleID . '"><p>' . $url . '</p><p>' . $phone . '</p></div>';
 							echo '</div>';
 						}
 					endwhile;
 				?>
 			</div>
 			<div class="resource-group" id="state">
+			<h2>State</h2>
 				<?php
 					$args = array( 'post_type' => 'cw_resources', 'posts_per_page' => -1 );
 					$resources_loop = new WP_query( $args );
@@ -75,7 +79,7 @@
 			</div>
 		</div>
 
-		<div class="info-box">
+		<div class="resource-info-box">
 			<?php echo $info_second; ?>
 		</div>
 

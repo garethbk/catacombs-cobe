@@ -103,7 +103,7 @@ body, html {
   .info-box p {
     padding: 1%; }
 
-.research-info-box {
+.research-info-box, .resource-info-box {
   width: 90%;
   padding: 1%;
   font-weight: 700;
@@ -112,7 +112,7 @@ body, html {
   margin-left: auto;
   margin-right: auto;
   background-color: #fff; }
-  .research-info-box p {
+  .research-info-box p, .resource-info-box p {
     padding: 1%; }
 
 .course-options {
@@ -262,15 +262,28 @@ span.cloudWord:hover {
 .opaque {
   opacity: 1; }
 
+.resource-area {
+  width: 80%;
+  margin-top: 2.5%;
+  margin-left: auto;
+  margin-right: auto; }
+
 .resource-group {
   text-align: center;
   margin-bottom: 2.5%; }
+  .resource-group h2 {
+    margin: 0;
+    padding: 1.5%; }
+
+.new-resource {
+  text-align: left; }
 
 .resource-name {
   background: lightblue; }
-
-.resource-name h3 {
-  display: inline-block; }
+  .resource-name h3 {
+    display: inline-block;
+    margin: 0;
+    padding: 1.5%; }
 
 .arrow {
   float: right; }
