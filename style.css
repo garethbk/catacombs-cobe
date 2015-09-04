@@ -279,14 +279,24 @@ span.cloudWord:hover {
   text-align: left; }
 
 .resource-name {
-  background: lightblue; }
+  background: lightblue;
+  transition: 1s; }
   .resource-name h3 {
     display: inline-block;
     margin: 0;
     padding: 1.5%; }
+  .resource-name:hover {
+    background: steelblue; }
 
 .arrow {
-  float: right; }
+  float: right;
+  font-size: 24px;
+  padding: 1.5%;
+  transition: 1s;
+  cursor: pointer; }
+
+.rotate {
+  transform: rotate(180deg); }
 
 .resource-content {
   background: lightgreen;
