@@ -12,12 +12,10 @@
 <body class="cw">
 
 <div class="resource-container">
-
 	<div class="head-area">
 		<h1><?php echo get_the_title( $post->ID ); ?></h1>
 		<?php the_post_thumbnail(); ?>
 	</div>
-
 	<div class="content-area">
 		<div class="resource-info-box">
 		<?php
@@ -33,60 +31,43 @@
 		?>
 		</div>
 		<div class="resource-area">
-			<div class="resource-group" id="vcu">
-			<h2>VCU</h2>
-				<?php
-					$args = array( 'post_type' => 'cw_resources', 'posts_per_page' => -1 );
-					$resources_loop = new WP_query( $args );
-					while ( $resources_loop->have_posts() ) : $resources_loop->the_post();
-						$category = strip_tags( get_the_term_list($post->ID, 'cw_resource_type') );
-						$category = strtolower($category);
-						$category = str_replace(' ', '', $category);
-						if ($category == 'vcu') {
-							$title = get_the_title($post->ID);
-							$titleID = strtolower($title);
-							$titleID = str_replace(' ', '', $titleID);
-							$url = get_post_meta($post->ID, "_url", true);
-							$phone = get_post_meta($post_>ID, "_phone", true);
-							echo '<div class="new-resource">';
-							echo '<div class="resource-name"><h3>' . $title . '</h3><span class="arrow" id="arrow-' . $titleID . '">&#8635;</span></div>';
-							echo '<div class="resource-content" id="content-' . $titleID . '"><p>' . $url . '</p><p>' . $phone . '</p></div>';
-							echo '</div>';
-						}
-					endwhile;
-				?>
-			</div>
-			<div class="resource-group" id="state">
-			<h2>State</h2>
-				<?php
-					$args = array( 'post_type' => 'cw_resources', 'posts_per_page' => -1 );
-					$resources_loop = new WP_query( $args );
-					while ( $resources_loop->have_posts() ) : $resources_loop->the_post();
-						$category = strip_tags( get_the_term_list($post->ID, 'cw_resource_type') );
-						$category = strtolower($category);
-						$category = str_replace(' ', '', $category);
-						if ($category == 'state') {
-							$title = get_the_title($post->ID);
-							$url = get_post_meta($post->ID, "_url", true);
-							$phone = get_post_meta($post_>ID, "_phone", true);
-							echo '<div class="new-resource">';
-							echo '<div class="resource-name"><h3>' . $title . '</h3></div>';
-							echo '<div class="resource-content"><p>' . $url . '</p><p>' . $phone . '</p></div>';
-							echo '</div>';
-						}
-					endwhile;
-				?>
-			</div>
+			<?php
+				$args = array('orderby'=>'asc', 'hide_empty'=>true);
+				$cats = get_terms('cw_resource_type', $args);
+				foreach($cats as $cat) {
+					$catID = strtolower($cat->name);
+					echo '<div class="resource-group" id="' . $catID . '">';
+					echo '<h2>' . $cat->name . '</h2>';
+					echo '</div>';
+				}
+			?>
 		</div>
-
 		<div class="resource-info-box">
 			<?php echo $info_second; ?>
 		</div>
-
 	</div>
-
 </div>
-
+<div class="dummy-holder" style="display: none;">
+<?php
+	$resources_array = array();
+	$args = array( 'post_type' => 'cw_resources', 'posts_per_page' => -1 );
+	$resources_loop = new WP_query( $args );
+	while ( $resources_loop->have_posts() ) : $resources_loop->the_post();
+		$category = strip_tags( get_the_term_list($post->ID, 'cw_resource_type') );
+		$category = strtolower($category);
+		$category = str_replace(' ', '', $category);
+		$title = get_the_title($post->ID);
+		$titleID = strtolower($title);
+		$titleID = str_replace(' ', '', $titleID);
+		$url = get_post_meta($post->ID, "_url", true);
+		$phone = get_post_meta($post->ID, "_phone", true);
+		$resource_data = array('category' => $category, 'title' => $title, 'titleID' => $titleID, 'url' => $url, 'phone' => $phone);
+		array_push($resources_array, $resource_data);
+	endwhile;
+	$resources_array = json_encode($resources_array);
+	echo $resources_array;
+?>
+</div>
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/resources.js" type="text/javascript"></script>

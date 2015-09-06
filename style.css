@@ -27,7 +27,6 @@ body, html {
   padding: 0; }
 .cw a, .cw a:hover, .cw a:active, .cw a:visited {
   text-decoration: none;
-  color: #fff;
   transition: 1s; }
 .cw h1, .cw h2, .cw h3, .cw h4, .cw h5, .cw h6 {
   margin: 0;
@@ -304,6 +303,14 @@ span.cloudWord:hover {
   max-height: 0;
   overflow-y: hidden;
   transition: 1s; }
+  .resource-content p {
+    padding-left: 2.5%;
+    padding-bottom: 1.5%;
+    font-size: 20px; }
+  .resource-content a {
+    color: steelblue; }
+    .resource-content a:hover {
+      color: lightblue; }
 
 .visible-slide {
   display: block;
