@@ -1,0 +1,68 @@
+$fullWidth: 100%;
+$ninetyWidth: 90%;
+$onePadding: 1%;
+$halfSec: 0.5s;
+$oneSec: 1s;
+$posRelative: relative;
+$posAbsolute: absolute;
+$vcuGold: #f8b800;
+$plainWhite: #fff;
+$flatBlack: #000;
+
+@font-face {
+    font-family: 'Cubano';
+    src: url(Cubano-Regular.otf), url(cubano-regular-webfont.eot?#iefix);
+}
+@font-face {
+    font-family: 'UnmaskedBB';
+    src: url(UnmaskedBB.ttf), url(unmaskedbb-webfont.eot?#iefix);
+}
+@mixin font-cubano {
+	font-family: 'Cubano', sans-serif;
+}
+@mixin font-bb {
+	font-family: 'UnmaskedBB', sans-serif;
+}
+@mixin fw-ah {
+    width: $fullWidth;
+    height: auto;
+}
+@mixin auto-margins {
+	margin-left: auto;
+	margin-right: auto;
+}
+@mixin reset-zero {
+	margin: 0;
+	padding: 0;
+}
+@mixin lr-padding-zero {
+    padding-left: 0;
+    padding-right: 0;
+}
+@mixin ig-container {
+	width: $fullWidth;
+    height: auto;
+    padding-bottom: 150px;
+    position: relative;
+    background-image: url(http://catacombs.garethbk.com/wp-content/uploads/2015/08/bg-tile-line.png);
+}
+@mixin info-box {
+	width: $ninetyWidth;
+    padding: $onePadding;
+    font-weight: 700;
+    font-size: 20px;
+    border: 2px solid black;
+}
+@mixin cloud-wrapper {
+	height: auto;
+    min-height: 500px;
+    position: $posRelative;
+    top: 35px;
+    display: none;
+}
+@mixin cloud-wrapper-span {
+    position: $posAbsolute;
+    cursor: pointer;
+    display: none;
+    transition: $oneSec;
+}

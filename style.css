@@ -319,6 +319,10 @@ span.cloudWord:hover {
   max-height: 500px;
   transition: 1s; }
 
+.vcu {
+  background-color: #000;
+  color: #f8b800; }
+
 /* Responsive breakpoints (lifted from Bootstrap!) */
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
