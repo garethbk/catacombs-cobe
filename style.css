@@ -288,6 +288,9 @@ span.cloudWord:hover {
     display: inline-block;
     margin: 0;
     padding: 1.5%; }
+    @media (max-width: 768px) {
+      .resource-name h3 {
+        font-size: 14px; } }
   .resource-name:hover {
     box-shadow: 0px 0px 5px #616161;
     z-index: 1000; }
@@ -298,6 +301,9 @@ span.cloudWord:hover {
   padding: 1.5%;
   transition: 1s;
   cursor: pointer; }
+  @media (max-width: 768px) {
+    .arrow {
+      font-size: 14px; } }
 
 .rotate {
   transform: rotate(180deg); }
@@ -318,6 +324,9 @@ span.cloudWord:hover {
     color: steelblue; }
     .resource-content a:hover {
       color: lightblue; }
+  @media (max-width: 768px) {
+    .resource-content p, .resource-content a {
+      font-size: 12px; } }
 
 .visible-slide {
   display: block;

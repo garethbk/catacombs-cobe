@@ -287,6 +287,9 @@ span.cloudWord:hover {
         display: inline-block;
         margin: 0;
         padding: 1.5%;
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
     }
     &:hover {
         box-shadow: 0px 0px 5px #616161;
@@ -300,6 +303,9 @@ span.cloudWord:hover {
     padding: 1.5%;
     transition: $oneSec;
     cursor: pointer;
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .rotate {
@@ -323,6 +329,11 @@ span.cloudWord:hover {
         color: steelblue;
         &:hover {
             color: lightblue;
+        }
+    }
+    @media (max-width: 768px) {
+        p, a {
+            font-size: 12px;
         }
     }
 }
