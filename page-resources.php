@@ -36,6 +36,7 @@
 				$cats = get_terms('cw_resource_type', $args);
 				foreach($cats as $cat) {
 					$catID = strtolower($cat->name);
+					$catID = str_replace(' ', '', $catID);
 					echo '<div class="resource-group" id="' . $catID . '">';
 					echo '<h2>' . $cat->name . '</h2>';
 					echo '</div>';
@@ -56,12 +57,14 @@
 		$category = strip_tags( get_the_term_list($post->ID, 'cw_resource_type') );
 		$category = strtolower($category);
 		$category = str_replace(' ', '', $category);
+		$level = strip_tags( get_the_term_list($post->ID, 'cw_resouce_level') );
+		$level = strtolower($level);
 		$title = get_the_title($post->ID);
 		$titleID = strtolower($title);
 		$titleID = str_replace(' ', '', $titleID);
 		$url = get_post_meta($post->ID, "_url", true);
 		$phone = get_post_meta($post->ID, "_phone", true);
-		$resource_data = array('category' => $category, 'title' => $title, 'titleID' => $titleID, 'url' => $url, 'phone' => $phone);
+		$resource_data = array('category' => $category, 'level' => $level, 'title' => $title, 'titleID' => $titleID, 'url' => $url, 'phone' => $phone);
 		array_push($resources_array, $resource_data);
 	endwhile;
 	$resources_array = json_encode($resources_array);
