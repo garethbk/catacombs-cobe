@@ -278,14 +278,19 @@ span.cloudWord:hover {
   text-align: left; }
 
 .resource-name {
-  background: lightblue;
-  transition: 1s; }
+  position: relative;
+  background-color: lightblue;
+  color: #000;
+  transition: box-shadow 0.25s, background-color 1s;
+  cursor: pointer;
+  z-index: 99; }
   .resource-name h3 {
     display: inline-block;
     margin: 0;
     padding: 1.5%; }
   .resource-name:hover {
-    background: steelblue; }
+    box-shadow: 0px 0px 5px #616161;
+    z-index: 1000; }
 
 .arrow {
   float: right;
@@ -298,11 +303,13 @@ span.cloudWord:hover {
   transform: rotate(180deg); }
 
 .resource-content {
-  background: lightgreen;
+  position: relative;
+  background-color: #e0e0e0;
   height: auto;
   max-height: 0;
   overflow-y: hidden;
-  transition: 1s; }
+  transition: 1s;
+  z-index: 98; }
   .resource-content p {
     padding-left: 2.5%;
     padding-bottom: 1.5%;
@@ -320,8 +327,24 @@ span.cloudWord:hover {
   transition: 1s; }
 
 .vcu {
-  background-color: #000;
-  color: #f8b800; }
+  background-color: #f8b800; }
+  .vcu:hover {
+    background-color: #ffc92c; }
+
+.city {
+  background-color: #9C27B0; }
+  .city:hover {
+    background-color: #bc37d3; }
+
+.state {
+  background-color: #8BC34A; }
+  .state:hover {
+    background-color: #a4d070; }
+
+.national {
+  background-color: #2196F3; }
+  .national:hover {
+    background-color: #51adf6; }
 
 /* Responsive breakpoints (lifted from Bootstrap!) */
 /* Custom, iPhone Retina */

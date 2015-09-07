@@ -277,15 +277,20 @@ span.cloudWord:hover {
 }
 
 .resource-name {
-    background: lightblue;
-    transition: $oneSec;
+    position: relative;
+    background-color: lightblue;
+    color: $flatBlack;
+    transition: box-shadow 0.25s, background-color $oneSec;
+    cursor: pointer;
+    z-index: 99;
     h3 {
         display: inline-block;
         margin: 0;
         padding: 1.5%;
     }
     &:hover {
-        background: steelblue;
+        box-shadow: 0px 0px 5px #616161;
+        z-index: 1000;
     }
 }
 
@@ -302,11 +307,13 @@ span.cloudWord:hover {
 }
 
 .resource-content {
-    background: lightgreen;
+    position: relative;
+    background-color: #e0e0e0;
     height: auto;
     max-height: 0;
     overflow-y: hidden;
     transition: 1s;
+    z-index: 98;
     p {
         padding-left: 2.5%;
         padding-bottom: 1.5%;
@@ -329,8 +336,31 @@ span.cloudWord:hover {
 }
 
 .vcu {
-    background-color: $flatBlack;
-    color: $vcuGold;
+    background-color: $vcuGold;
+    &:hover {
+        background-color: lighten($vcuGold, 10%);
+    }
+}
+
+.city {
+    background-color: #9C27B0;
+    &:hover {
+        background-color: lighten(#9C27B0, 10%);
+    }
+}
+
+.state {
+    background-color: #8BC34A;
+    &:hover {
+        background-color: lighten(#8BC34A, 10%);
+    }
+}
+
+.national {
+    background-color: #2196F3;
+    &:hover {
+        background-color: lighten(#2196F3, 10%);
+    }
 }
 
 /* Responsive breakpoints (lifted from Bootstrap!) */
