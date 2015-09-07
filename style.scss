@@ -343,23 +343,23 @@ span.cloudWord:hover {
 }
 
 .city {
-    background-color: #9C27B0;
+    background-color: $cityColor;
     &:hover {
-        background-color: lighten(#9C27B0, 10%);
+        background-color: lighten($cityColor, 10%);
     }
 }
 
 .state {
-    background-color: #8BC34A;
+    background-color: $stateColor;
     &:hover {
-        background-color: lighten(#8BC34A, 10%);
+        background-color: lighten($stateColor, 10%);
     }
 }
 
 .national {
-    background-color: #2196F3;
+    background-color: $nationalColor;
     &:hover {
-        background-color: lighten(#2196F3, 10%);
+        background-color: lighten($nationalColor, 10%);
     }
 }
 
