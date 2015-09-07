@@ -332,19 +332,34 @@ span.cloudWord:hover {
     background-color: #ffc92c; }
 
 .city {
-  background-color: #9C27B0; }
+  background-color: #C4D600; }
   .city:hover {
-    background-color: #bc37d3; }
+    background-color: #eaff0a; }
 
 .state {
-  background-color: #8BC34A; }
+  background-color: #6BCABA; }
   .state:hover {
-    background-color: #a4d070; }
+    background-color: #91d7cc; }
 
 .national {
-  background-color: #2196F3; }
+  background-color: #69B3E7; }
   .national:hover {
-    background-color: #51adf6; }
+    background-color: #95c9ee; }
+
+.resource-legend {
+  height: 200px;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+.legend-item {
+  width: 100%;
+  height: 25%;
+  text-align: center;
+  display: inline-block;
+  transition: 1s; }
+  .legend-item h3 {
+    font-size: 44px;
+    margin-top: 0; }
 
 /* Responsive breakpoints (lifted from Bootstrap!) */
 /* Custom, iPhone Retina */

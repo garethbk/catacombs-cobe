@@ -31,6 +31,19 @@
 		?>
 		</div>
 		<div class="resource-area">
+			<div class="resource-legend">
+			<?php
+				$args = array('orderby'=>'asc', 'hide_empty'=>true);
+				$levels = get_terms('cw_resource_level', $args);
+				foreach($levels as $level) {
+					$levelsID = strtolower($level->name);
+					$levelsID = str_replace(' ', '', $levelsID);
+					echo '<div class="legend-item ' . $levelsID . '">';
+					echo '<h3>' . $level->name . '</h3>';
+					echo '</div>';
+				}
+			?>
+			</div>
 			<?php
 				$args = array('orderby'=>'asc', 'hide_empty'=>true);
 				$cats = get_terms('cw_resource_type', $args);
