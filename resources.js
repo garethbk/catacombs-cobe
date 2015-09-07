@@ -4,7 +4,7 @@ $resource_data = $('.dummy-holder').html();
 $resource_data = JSON.parse($resource_data);
 for (i=0; i < $resource_data.length; i++) {
 	$resource_html = '<div class="new-resource">';
-	$resource_html += '<div class="resource-name" id="' + $resource_data[i].titleID + '">';
+	$resource_html += '<div class="resource-name ' + $resource_data[i].level + '" id="' + $resource_data[i].titleID + '">';
 	$resource_html += '<h3>' + $resource_data[i].title + '</h3>';
 	$resource_html += '<span class="arrow">&#8635;</span></div>';
 	$resource_html += '<div class="resource-content" id="content-' + $resource_data[i].titleID + '">';
