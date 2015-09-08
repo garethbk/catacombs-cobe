@@ -287,7 +287,10 @@ span.cloudWord:hover {
         display: inline-block;
         margin: 0;
         padding: 1.5%;
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
+            font-size: 10px;
+        }
+        @media (min-width: 481px) and (max-width: 768px) {
             font-size: 14px;
         }
     }
@@ -303,7 +306,12 @@ span.cloudWord:hover {
     padding: 1.5%;
     transition: $oneSec;
     cursor: pointer;
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
+        font-size: 10px;
+        padding: 0;
+        margin: 2% 2% 0 0;
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
         font-size: 14px;
     }
 }
