@@ -61,7 +61,8 @@
 		$titleID = str_replace(' ', '', $titleID);
 		$url = get_post_meta($post->ID, "_url", true);
 		$phone = get_post_meta($post->ID, "_phone", true);
-		$resource_data = array('category' => $category, 'level' => $level, 'title' => $title, 'titleID' => $titleID, 'url' => $url, 'phone' => $phone);
+		$desc = get_post_meta($post->ID, "_desc", true);
+		$resource_data = array('category' => $category, 'level' => $level, 'title' => $title, 'titleID' => $titleID, 'url' => $url, 'phone' => $phone, 'desc' => $desc);
 		array_push($resources_array, $resource_data);
 	endwhile;
 	$resources_array = json_encode($resources_array);

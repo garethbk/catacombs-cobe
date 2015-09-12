@@ -317,20 +317,22 @@ span.cloudWord:hover {
 
 .resource-content {
   position: relative;
-  background-color: #e0e0e0;
+  background-color: #ededed;
   height: auto;
   max-height: 0;
   overflow-y: hidden;
   transition: 1s;
-  z-index: 98; }
+  z-index: 98;
+  font-weight: 800; }
   .resource-content p {
     padding-left: 2.5%;
+    padding-right: 2.5%;
     padding-bottom: 1.5%;
     font-size: 20px; }
   .resource-content a {
     color: steelblue; }
     .resource-content a:hover {
-      color: lightblue; }
+      color: #8db3d3; }
   @media (max-width: 768px) {
     .resource-content p, .resource-content a {
       font-size: 12px; } }
