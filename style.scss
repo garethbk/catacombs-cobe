@@ -28,6 +28,7 @@ body, html {
 	    text-decoration: none;
 	    //color: $plainWhite;
 	    transition: $oneSec;
+        -webkit-transition: $oneSec;
 	}
 	h1, h2, h3, h4, h5, h6 {
 	    @include reset-zero;
@@ -131,9 +132,11 @@ body, html {
 	    padding: 0% 5%;
 	    margin-top: 2.5%;
 	    transition: $halfSec;
+        -webkit-transition: $halfSec;
 	}
 	h2 {
 		transition: $halfSec;
+        -webkit-transition: $halfSec;
 	}
 }
 
@@ -148,6 +151,7 @@ body, html {
     border: 2px solid transparent;
     display: none;
     transition: $halfSec;
+    -webkit-transition: $halfSec;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 	&:hover {
@@ -176,6 +180,7 @@ body, html {
     cursor: pointer;
     display: inline-block;
     transition: $halfSec;
+    -webkit-transition: $halfSec;
     p {
     	@include font-cubano;
     	font-weight: 100;
@@ -234,6 +239,7 @@ body, html {
 
 span.cloudWord:hover {
     transform: scale(1.5);
+    -webkit-transform: scale(1.5);
     z-index: 99;
 }
 
@@ -247,6 +253,7 @@ span.cloudWord:hover {
     h2 {
     	font-size: 48px;
     	transition: $oneSec;
+        -webkit-transition: $oneSec;
     	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     }
 }
@@ -283,6 +290,7 @@ span.cloudWord:hover {
     background-color: lightblue;
     color: $flatBlack;
     transition: box-shadow 0.25s, background-color $oneSec;
+    -webkit-transition: box-shadow 0.25s, background-color $oneSec;
     cursor: pointer;
     z-index: 99;
     h3 {
@@ -307,6 +315,7 @@ span.cloudWord:hover {
     font-size: 24px;
     padding: 1.5%;
     transition: $oneSec;
+    -webkit-transition: $oneSec;
     cursor: pointer;
     @media (max-width: 480px) {
         font-size: 10px;
@@ -320,6 +329,7 @@ span.cloudWord:hover {
 
 .rotate {
     transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 
 .resource-content {
@@ -328,7 +338,8 @@ span.cloudWord:hover {
     height: auto;
     max-height: 0;
     overflow-y: hidden;
-    transition: 1s;
+    transition: $oneSec;
+    -webkit-transition: $oneSec;
     z-index: 98;
     font-weight: 800;
     p {
@@ -355,7 +366,8 @@ span.cloudWord:hover {
     padding-top: 15px;
     padding-bottom: 15px;
     max-height: 500px;
-    transition: 1s;
+    transition: $oneSec;
+    -webkit-transition: $oneSec;
 }
 
 .vcu {
@@ -398,6 +410,7 @@ span.cloudWord:hover {
     text-align: center;
     display: inline-block;
     transition: $oneSec;
+    -webkit-transition: $oneSec;
     h3 {
         font-size: 44px;
         margin-top: 0;

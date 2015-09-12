@@ -27,7 +27,8 @@ body, html {
   padding: 0; }
 .cw a, .cw a:hover, .cw a:active, .cw a:visited {
   text-decoration: none;
-  transition: 1s; }
+  transition: 1s;
+  -webkit-transition: 1s; }
 .cw h1, .cw h2, .cw h3, .cw h4, .cw h5, .cw h6 {
   margin: 0;
   padding: 0;
@@ -137,9 +138,11 @@ body, html {
     font-size: 20px;
     padding: 0% 5%;
     margin-top: 2.5%;
-    transition: 0.5s; }
+    transition: 0.5s;
+    -webkit-transition: 0.5s; }
   .course-area h2 {
-    transition: 0.5s; }
+    transition: 0.5s;
+    -webkit-transition: 0.5s; }
 
 .course-box {
   width: 100%;
@@ -152,6 +155,7 @@ body, html {
   border: 2px solid transparent;
   display: none;
   transition: 0.5s;
+  -webkit-transition: 0.5s;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   cursor: pointer; }
   .course-box:hover {
@@ -176,7 +180,8 @@ body, html {
   border: 2px outset #333;
   cursor: pointer;
   display: inline-block;
-  transition: 0.5s; }
+  transition: 0.5s;
+  -webkit-transition: 0.5s; }
   .course-cat p {
     font-family: 'Cubano', sans-serif;
     font-weight: 100; }
@@ -221,7 +226,8 @@ body, html {
     position: absolute;
     cursor: pointer;
     display: none;
-    transition: 1s; }
+    transition: 1s;
+    -webkit-transition: 1s; }
 
 #cloud-wrapper-xs {
   height: auto;
@@ -234,10 +240,12 @@ body, html {
     position: absolute;
     cursor: pointer;
     display: none;
-    transition: 1s; }
+    transition: 1s;
+    -webkit-transition: 1s; }
 
 span.cloudWord:hover {
   transform: scale(1.5);
+  -webkit-transform: scale(1.5);
   z-index: 99; }
 
 #course-select {
@@ -252,6 +260,7 @@ span.cloudWord:hover {
   #course-select h2 {
     font-size: 48px;
     transition: 1s;
+    -webkit-transition: 1s;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
 
 .transparent {
@@ -281,6 +290,7 @@ span.cloudWord:hover {
   background-color: lightblue;
   color: #000;
   transition: box-shadow 0.25s, background-color 1s;
+  -webkit-transition: box-shadow 0.25s, background-color 1s;
   cursor: pointer;
   z-index: 99; }
   .resource-name h3 {
@@ -302,6 +312,7 @@ span.cloudWord:hover {
   font-size: 24px;
   padding: 1.5%;
   transition: 1s;
+  -webkit-transition: 1s;
   cursor: pointer; }
   @media (max-width: 480px) {
     .arrow {
@@ -313,7 +324,8 @@ span.cloudWord:hover {
       font-size: 14px; } }
 
 .rotate {
-  transform: rotate(180deg); }
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg); }
 
 .resource-content {
   position: relative;
@@ -322,6 +334,7 @@ span.cloudWord:hover {
   max-height: 0;
   overflow-y: hidden;
   transition: 1s;
+  -webkit-transition: 1s;
   z-index: 98;
   font-weight: 800; }
   .resource-content p {
@@ -342,7 +355,8 @@ span.cloudWord:hover {
   padding-top: 15px;
   padding-bottom: 15px;
   max-height: 500px;
-  transition: 1s; }
+  transition: 1s;
+  -webkit-transition: 1s; }
 
 .vcu {
   background-color: #f8b800; }
@@ -374,7 +388,8 @@ span.cloudWord:hover {
   height: 25%;
   text-align: center;
   display: inline-block;
-  transition: 1s; }
+  transition: 1s;
+  -webkit-transition: 1s; }
   .legend-item h3 {
     font-size: 44px;
     margin-top: 0; }

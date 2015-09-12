@@ -70,4 +70,5 @@ $nationalColor: #69B3E7;
     cursor: pointer;
     display: none;
     transition: $oneSec;
+    -webkit-transition: $oneSec;
 }
