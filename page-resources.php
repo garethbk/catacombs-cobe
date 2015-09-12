@@ -17,19 +17,6 @@
 		<?php the_post_thumbnail(); ?>
 	</div>
 	<div class="content-area">
-		<div class="resource-info-box">
-		<?php
-			if ( have_posts() ) : while ( have_posts() ) : the_post();
-				$info_first = get_post_meta($post->ID, 'info_first', true);
-				$info_first = strtoupper($info_first);
-				$info_second = get_post_meta($post->ID, 'info_second', true);
-				$info_second = strtoupper($info_second);
-				echo $info_first;
-				endwhile; else :
-					_e( 'No content here' );
-			endif;
-		?>
-		</div>
 		<div class="resource-area">
 			<div class="resource-legend">
 			<?php
@@ -55,9 +42,6 @@
 					echo '</div>';
 				}
 			?>
-		</div>
-		<div class="resource-info-box">
-			<?php echo $info_second; ?>
 		</div>
 	</div>
 </div>
