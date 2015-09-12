@@ -47,6 +47,8 @@ $nationalColor: #69B3E7;
     height: auto;
     padding-bottom: 150px;
     position: relative;
+}
+@mixin ch-bg {
     background-image: url(http://catacombs.garethbk.com/wp-content/uploads/2015/08/bg-tile-line.png);
 }
 @mixin info-box {

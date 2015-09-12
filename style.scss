@@ -53,12 +53,14 @@ body, html {
 
 .cw-container {
 	@include ig-container;
+    @include ch-bg;
 	@include auto-margins;
 	background-color: $vcuGold;
 }
 
 .research-container {
 	@include ig-container;
+    @include ch-bg;
 	@include auto-margins;
 	background-color: $plainWhite;
 }
