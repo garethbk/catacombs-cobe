@@ -35,7 +35,7 @@
 			?>
 			</div>
 			<?php
-				$args = array('orderby'=>'asc', 'hide_empty'=>true);
+				$args = array('orderby'=>'slug', 'hide_empty'=>true);
 				$cats = get_terms('cw_resource_type', $args);
 				foreach($cats as $cat) {
 					$catID = strtolower($cat->name);
