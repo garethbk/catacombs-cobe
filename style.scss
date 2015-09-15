@@ -398,15 +398,22 @@ span.cloudWord:hover {
     }
 }
 
+.color-key {
+    background-color: #fff;
+    &:hover {
+        background-color: darken(#fff, 10%);
+    }
+}
+
 .resource-legend {
-    height: 200px;
+    height: 250px;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
 .legend-item {
     width: 100%;
-    height: 25%;
+    height: 20%;
     text-align: center;
     display: inline-block;
     transition: $oneSec;

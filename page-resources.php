@@ -19,8 +19,11 @@
 	<div class="content-area">
 		<div class="resource-area">
 			<div class="resource-legend">
+			<div class="legend-item color-key">
+				<h3>Color Key</h3>
+			</div>
 			<?php
-				$args = array('orderby'=>'asc', 'hide_empty'=>true);
+				$args = array('orderby'=>'slug', 'hide_empty'=>true);
 				$levels = get_terms('cw_resource_level', $args);
 				foreach($levels as $level) {
 					$levelsID = strtolower($level->name);
