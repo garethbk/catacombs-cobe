@@ -364,19 +364,19 @@ span.cloudWord:hover {
     background-color: #ffc92c; }
 
 .city {
-  background-color: #C4D600; }
+  background-color: #2E8B57; }
   .city:hover {
-    background-color: #eaff0a; }
+    background-color: #3bb16f; }
 
 .state {
-  background-color: #6BCABA; }
+  background-color: #F93535; }
   .state:hover {
-    background-color: #91d7cc; }
+    background-color: #fa6767; }
 
 .national {
-  background-color: #69B3E7; }
+  background-color: #4682B4; }
   .national:hover {
-    background-color: #95c9ee; }
+    background-color: #699bc4; }
 
 .color-key {
   background-color: #fff; }
