@@ -10,6 +10,7 @@ for (i=0; i < $resource_data.length; i++) {
 	$resource_html += '<div class="resource-content" id="content-' + $resource_data[i].titleID + '">';
 	$resource_html += '<p><a href="' + $resource_data[i].url + '" target="_blank">' + $resource_data[i].url + '</a></p>';
 	$resource_html += '<p>' + $resource_data[i].phone + '</p>';
+	$resource_html += '<p><a href="mailto:' + $resource_data[i].email + '">' + $resource_data[i].email + '</a></p>';
 	$resource_html += '<p>' + $resource_data[i].desc + '</p>';
 	$resource_html += '</div></div>';
 
